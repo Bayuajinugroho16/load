@@ -1,0 +1,19 @@
+{
+  "name": "food-order-load-balancing",
+  "version": "1.0.0",
+  "description": "Implementasi load balancer Round Robin untuk beberapa instance food service",
+  "main": "load-balancer.js",
+  "scripts": {
+    "start": "node load-balancer.js",
+    "server1": "node server.js",
+    "server2": "powershell -NoProfile -Command \"$env:PORT='3002'; $env:SERVER_NAME='Food Server 2'; node server.js\"",
+    "server3": "powershell -NoProfile -Command \"$env:PORT='3003'; $env:SERVER_NAME='Food Server 3'; node server.js\"",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
